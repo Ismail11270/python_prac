@@ -89,7 +89,6 @@ class TextEditorTab(qt.QWidget):
             "Save As": ["Ctrl+K", self.doSaveAs]
         }
         self.prepareMenu(parent)
-
         # Widgets
         self.textEditorWidget = qt.QPlainTextEdit()
         self.textEditorWidget.textChanged.connect(self.handleFileChange)
