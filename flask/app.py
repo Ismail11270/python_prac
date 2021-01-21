@@ -1,9 +1,7 @@
 from flask import Flask
-from flask import g as g
-from flask import render_template,  request, redirect, url_for, flash, session
+from flask import render_template,  request, session
 import sqlite3
 import os
-from markupsafe import escape
 
 app = Flask("Products management")
 
