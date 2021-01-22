@@ -151,7 +151,6 @@ def delete_user():
 
 if __name__ == "__main__":
     if not os.path.exists(DATABASE):
-        connection = sqlite3.connect(DATABASE)
         create_tables()
 
     app.run(debug=True)
