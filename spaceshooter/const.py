@@ -7,3 +7,5 @@ missile = "textures\\ships\\missile.png"
 player_fire_delay = 100
 enemy_spawn_rate = 1000
 explosions = "textures\\expl.png"
+icon = "textures\\icon.png"
+font = 'Comic Sans MS'

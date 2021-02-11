@@ -9,7 +9,6 @@ SIZE_Y = const.SIZE_Y
 ufos = []
 spawn_rate = 300  # greater is slower
 hp = 20
-# prepare explosion frames list
 expls = pygame.transform.scale(pygame.image.load(const.explosions),(1024,1024))
 
 
@@ -22,10 +21,10 @@ def spawn_enemies():
 def main():
     pygame.init()
     screen = pygame.display.set_mode((SIZE_X, SIZE_Y))
-    pygame.display.set_caption("Chess Game")
-    icon = pygame.image.load("textures\\icon.png")
+    pygame.display.set_caption("Spaceshooter")
+    icon = pygame.image.load(const.icon)
     pygame.font.init()
-    font = pygame.font.SysFont('Comic Sans MS', 30)
+    font = pygame.font.SysFont(const.font, 30)
     gameover_text = font.render("GAME OVER", False, (255, 50, 0))
     pygame.display.set_icon(icon)
     background = pygame.image.load(const.background)
@@ -44,8 +43,6 @@ def main():
                     player.direction = [0, -1]
                 if event.key == pygame.K_DOWN:
                     player.direction = [0, 1]
-                # if event.key == pygame.K_SPACE:
-                #     player.shoot()
             if event.type == pygame.KEYUP:
                 if event.key == pygame.K_LEFT and player.direction == [-1, 0]:
                     player.direction = [0, 0]

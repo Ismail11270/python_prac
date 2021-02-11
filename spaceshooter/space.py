@@ -4,9 +4,7 @@ import const
 
 class Sprite:
 
-    def __init__(self, texture, xy=None):
-        if xy is None:
-            xy = [0, 0]
+    def __init__(self, texture, xy=(0, 0)):
         self.img = pygame.image.load(texture)
         self.rect = self.img.get_rect()
         self.rect.x = xy[0]
